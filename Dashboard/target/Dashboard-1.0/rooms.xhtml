@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Domotics</title>
+            </f:facet>
+        </h:head>
+        
+        <h:body>
+            
+            <p:stack icon="/resources/images/stack.png" expanded="true">
+                <p:menuitem value="Home" icon="/resources/images/home.png" url="home.xhtml"/>
+                <p:menuitem value="Garden" icon="/resources/images/garden.png" url="garden.xhtml"/>
+                <p:menuitem value="Kitchen" icon="/resources/images/kitchen.png" url="kitchen.xhtml"/>
+                <p:menuitem value="Rooms" icon="/resources/images/room.png" url="rooms.xhtml"/>
+                
+            </p:stack>
+            
+            Temperatura do quarto 1:
+            <h:form>
+                <h:outputText id="temp_quarto1" value="#{rooms.temp_room_sleep1}" />
+            </h:form>
+            Temperatura do quarto 2:
+            <h:form>
+                <h:outputText id="temp_quarto2" value="#{rooms.temp_room_sleep2}" />
+            </h:form>
+            Temperatura do quarto de estudo:
+            <h:form>
+                <h:outputText id="temp_quarto_study" value="#{rooms.temp_room_study}" />
+            </h:form>
+        </h:body>
+        
+    </f:view>
+</html>
+

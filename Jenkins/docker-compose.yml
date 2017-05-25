@@ -1,0 +1,8 @@
+version: '2'
+services:
+  jenkins:
+    image: jenkins
+    ports:
+      - "9090:8080"
+      - "50000:50000"
+    restart: "always"
